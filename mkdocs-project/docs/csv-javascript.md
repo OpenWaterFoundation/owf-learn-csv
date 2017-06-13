@@ -181,6 +181,9 @@ The **parse** function may be passed a configuration object. This type of object
 }
 ```
 
+Refer to the following documentation for further explanation
+[Config Documentation](http://papaparse.com/docs#config).
+
 ### Results
 
 A parsed result will always contain the following three objects:
