@@ -16,7 +16,7 @@ No need to provide complete solution but point out basics that illustrate why a 
 
 Papa Parse is a fast and powerful, in-browser CSV (delimeted text) parser that gracefully handles large files and malformed input. 
 
-Click here for more information on [Papa Parse](http://papaparse.com)
+Click here for more information on [PapaParse](http://papaparse.com).
 
 * [Convert CSV to JSON](#convert-csv-to-json)
 	* [Parse String](#parse-string)
@@ -26,10 +26,8 @@ Click here for more information on [Papa Parse](http://papaparse.com)
 * [Convert JSON to CSV](#convert-json-to-csv)
 * [Config](#config)
 * [Results](#results)
-	* [Data](#data)
-	* [Errors](#errors)
-	* [Meta](#meta)
-* [Extras](#extras)
+* [Missing Values](#missing-values)
+* [Empty Lines](#empty-lines)
 
 ### Convert CSV to JSON
 
@@ -60,6 +58,7 @@ console.log(parsed_string);
 Papa.parse(file, config);
 ```
 * **file** is a File object obtained from the DOM (Document Object Model).
+* **config** is an optional config object
 
 ```
 Papa.parse(file, {
@@ -83,18 +82,13 @@ Papa.parse(url, {
 * The second argument is a **config object** where **download: true** is set.
 * The code above does not actually return anything. The results are provided asynchronously to a callback function.
 
-**Example:**
-
-```
-```
-
 
 #### Using jQuery to Select Files
 
+When using jQuery include the latest jQuery Javascript file.
 ```
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 ```
-
-### Convert JSON to CSV
 
 ```
 $.get(file, function(result){
@@ -111,50 +105,59 @@ $.get("test-data.csv",function(result){
 	var parsed_file = Papa.parse(result);
 	console.log(parsed_file);
 });
+```
 
+### Convert JSON to CSV
+
+Papa's unparse utility writes out correct delimited text strings given an array of arrays or an array of objects. The unparse function will write these arrays to proper JSON.
+
+```
+Papa.unparse(data[, config]);
+```
+
+* Returns delimited text as a string.
+* **data** is one of the following: 
+	* Array of arrays
+	* Array of objects
+	* Object defining **fields** and **data**
+* **config** is an optional config object
+
+```
+var csv = Papa.unparse([
+	["1-1","1-2","1-3"],
+	["2-1","2-2","2-3"]
+]);
+console.log(csv);
+```
+```
+var csv = Papa.unparse([
+	{
+		"Column 1": "foo",
+		"Column 2": "bar"
+	},
+	{
+		"Column 1": "abc",
+		"Column 2": "def"
+	}
+]);
+console.log(csv);
+```
+
+```
+var csv = Papa.unparse({
+	fields: ["Column 1", "Column 2"],
+	data: [
+		["foo", "bar"],
+		["abc", "def"]
+	]
+});
+console.log(csv);
 ```
 
 ### Config
 
-```
-```
+The **parse** function may be passed a configuration object. This type of object defines settings, behavior, and callbacks used during the parsing process. Any properties that are left unspecified will be set to their default values.
 
-### Results
-
-```
-```
-
-#### Data
-
-An array of rows. If the header option specified in the config object is false, rows are arrays; otherwise they are objects of data keyed by the field name.
-
-#### Errors
-
-An array of errors.
-
-**Format:**
-
-```
-// Error structure
-{
-	type: "",     // A generalization of the error
-	code: "",     // Standardized error code
-	message: "",  // Human-readable details
-	row: 0,       // Row index of parsed data where error is
-	
-}
-```
-
-#### Meta
-
-```
-```
-
-### Extras
-
-#### Config Object
-
-This object defines settings, behaviors, and callbacks used during the parsing process. Any property that has not been specified will resort to the default value.
 ```
 {
 	delimiter: "",	// auto-detect
@@ -178,10 +181,49 @@ This object defines settings, behaviors, and callbacks used during the parsing p
 }
 ```
 
-**TODO smalers 2017-06-12 need Kory to fill out**
+### Results
 
-Provide overview, examples to create and parse CSV, also summarize the issues described in the CSV syntax page,
-such as how to deal with missing values, quoted content, etc.  Use section breaks to make readable.
-Link to relevant information.
+A parsed result will always contain the following three objects:
+* **data**
+* **errors**
+* **meta**
+Data and errors are arrays, and meta is an object. 
 
-MetaReader might be something to investigate.
+```
+{
+	data:   // array of parsed data
+	errors: // array of errors
+	meta:   // object with extra info
+}
+```
+
+### Missing Values
+
+Papa Parse does handle null and or missing values. However, when dealing with null, PapaParse will parse it as a string. This can be problematic when looking for null as an object rather than a string. 
+
+**Example:**
+```
+if(data[0] == null)
+{
+	// do something
+}
+```
+```
+if(data[0] == "null")
+{
+	// do something
+}
+```
+
+When dealing with missing values, PapaParse will just insert an empty string ** "" **.
+
+### Empty Lines
+
+When dealing with empty lines, PapaParse has an option that can be set to **true** in the config object being passed to the parse function. If there are empty lines in a data file set the **skipEmptyLines** option to true.
+
+```
+{
+	skipEmptyLines: true // defaults to false
+}
+```
+ 
