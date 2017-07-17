@@ -1,4 +1,4 @@
-# OWF Learn CSV / CSV Syntax
+# Learn CSV / CSV Syntax
 
 CSV file syntax is, on the surface, relatively basic.
 However, there are a number of considerations that must be handled in software.

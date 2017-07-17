@@ -1,5 +1,6 @@
-# OWF Learn CSV / Resources
+# Learn CSV / Resources
 
 The following CSV resources are helpful:
 
-* **TODO smalers 2017-06-12 need to insert**
+* [Comma-separated values on Wikipedia](https://en.wikipedia.org/wiki/Comma-separated_values)
+* [RFC 4180 specification for CSV files](https://www.ietf.org/rfc/rfc4180.txt)

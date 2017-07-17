@@ -17,6 +17,7 @@ This page of the documentation includes the following sections:
 
 The [Open Water Foundation](http://openwaterfoundation.org) is a 501(c)3 nonprofit social enterprise that focuses
 on developing and supporting open source software for water resources, so that organizations can make better decisions about water.
+OWF also works to increase publishing and use of open data to improve transparency and efficiency in sharing data.
 
 See also other [OWF learning resources](http://learn.openwaterfoundation.org).
 
@@ -28,7 +29,7 @@ This documentation is not intended to be a full reference for CSV but focuses on
 will help understand important technical concepts and be successful with CSV.
 The following main sections are included in this documentation:
 
-* [CSV Overview](overview) - includes resources and tutorials
+* [CSV Overview](csv-overview) - includes resources and tutorials
 * CSV Tools by Language
 	+ [CSV with Excel](csv-excel)
 	+ [CSV with Java](csv-java)
