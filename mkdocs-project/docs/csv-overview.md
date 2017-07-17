@@ -1,10 +1,11 @@
-# OWF Learn CSV / CSV Overview
+# Learn CSV / CSV Overview
 
 Comma-separated-value (CSV) files are perhaps the simplest format that can be used for a dataset.
 It is for this reason that CSV files are generally supported by many tools, including spreadsheets,
 database import/export, open data portals, geographic information systems, visualization tools, and other software tools.
 The basic syntax of a CSV file is columns of data separated by a comma.
 An alternate delimiter character can be used.  For example, using a tab character as delimiter would result in tab-delimited-file.
+The pipe or vertical bar (`|`) is another common delimiter.
 An example CSV file, with heading and data rows is as follows:
 
 ```text
@@ -22,10 +23,10 @@ The [CSV Syntax documentation](csv-syntax) describes syntax and limitations.
 ## CSV Benefits
 
 * Very simple format that can be handled by many software programs
-* File size is generally small because the file mainly consists of data values
+* File size is generally small because the file mainly consists of data values and often compresses well
 
 ## CSV Limitations
 
-* No natural metadata format and therefore requires assumptions or implementation-specific approach
+* No native metadata format and therefore requires assumptions or implementation-specific approach
 * Can be difficult to view/edit in a text editor due to lack of formatting
-* Errors in formatting can be difficult to detect due to simple format
+* Errors in formatting (such as commas used in data) can be difficult to detect due to simple format
