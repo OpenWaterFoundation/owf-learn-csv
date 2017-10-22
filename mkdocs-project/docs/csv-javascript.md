@@ -1,4 +1,4 @@
-# Learn CSV / CSV for JavaScript #
+# Learn CSV / CSV with JavaScript #
 
 This page provides information about using CSV format with JavaScript.
 
@@ -6,6 +6,8 @@ The following sections are available in this documentation:
 
 * [JavaScript Language](#javascript-language) - reading and writing directly using JavaScript language
 * [Papa Parse](#papa-parse) - a useful library
+
+--------------
 
 ## JavaScript Language ##
 

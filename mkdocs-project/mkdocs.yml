@@ -15,13 +15,18 @@ pages:
   - CSV with Python: csv-python.md
   - CSV with R: csv-r.md
 - Resources: csv-resources.md
-theme: readthedocs
-repo_url:  https://github.com/OpenWaterFoundation/owf-learn-csv
-site_description:  Open Water Foundation Learn CSV
-site_author:  Open Water Foundation
-site_favicon:  OWF-Logo-Favicon-32x32.png
-copyright:  Copyright Open Water Foundation
-#extra_css:
-#- css/extra.css
-# Defaults to all JavaScript in the docs folder
-# extra_javascript:
+# ------- configuration properties ---------------
+# # Use Material theme
+# # - installation notes:  https://github.com/squidfunk/mkdocs-material
+theme: material
+#theme: readthedocs
+# Don't indicate the repo because Edit will be shown on every page (don't want that in deployed mode)
+# - Also see edit_uri if repo_url is specified
+#repo_url:  https://github.com/OpenWaterFoundation/owf-learn-csv
+site_description: 'Open Water Foundation Learn CSV'
+site_author:  'Open Water Foundation'
+site_favicon:  'images/OWF-Logo-Favicon-32x32.png'
+copyright:  'Copyright Open Water Foundation'
+extra:
+  # Use extra CSS to customize styles, based on theme
+  extra_css: 'css/extra-material-theme.css'

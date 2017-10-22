@@ -1,4 +1,4 @@
-# Learn CSV / CSV Overview
+# Learn CSV / CSV Overview #
 
 Comma-separated-value (CSV) files are perhaps the simplest format that can be used for a dataset.
 It is for this reason that CSV files are generally supported by many tools, including spreadsheets,
@@ -20,12 +20,12 @@ In both cases, dealing with the limitations of CSV is critical to ensuring data 
 
 The [CSV Syntax documentation](csv-syntax) describes syntax and limitations.
 
-## CSV Benefits
+## CSV Benefits ##
 
 * Very simple format that can be handled by many software programs
 * File size is generally small because the file mainly consists of data values and often compresses well
 
-## CSV Limitations
+## CSV Limitations ##
 
 * No native metadata format and therefore requires assumptions or implementation-specific approach
 * Can be difficult to view/edit in a text editor due to lack of formatting
