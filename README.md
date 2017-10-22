@@ -2,9 +2,9 @@
 
 This repository contains the [Open Water Foundation (OWF)](http://openwaterfoundation.org/) comma separated value (CSV) training materials,
 which provides guidance for using the CSV file format.
-The documentation is written for the layperson in order to encourage use of GeoJSON.
+The documentation is written for the layperson in order to encourage use of CSV data files.
 
-See the deployed [OWF / Learn GeoJSON](http://learn.openwaterfoundation.org/owf-learn-csv/) documentation.
+See the deployed [OWF / Learn CSV](http://learn.openwaterfoundation.org/owf-learn-csv/) documentation.
 
 ## Repository Contents ##
 
