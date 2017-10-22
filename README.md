@@ -39,7 +39,7 @@ If the development environment is properly configured, edit and view content as 
 
 ## License ##
 
-The OWF Learn MkDocs website content and examples are licensed under the
+The OWF Learn CSV website content and examples are licensed under the
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0).
 
 ## Contributing ##
