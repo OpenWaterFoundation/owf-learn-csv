@@ -7,13 +7,14 @@ pages:
 - Home: index.md
 - CSV Overview: csv-overview.md
 - CSV Syntax: csv-syntax.md
-- 'CSV Tools by Language':
+- 'CSV Tools by Technology':
   - CSV with Excel: csv-excel.md
   - CSV with Java: csv-java.md
   - CSV with JavaScript: csv-javascript.md
   - CSV with PostgreSQL: csv-postgresql.md
   - CSV with Python: csv-python.md
   - CSV with R: csv-r.md
+  - CSV with TSTool: csv-tstool.md
 - Resources: csv-resources.md
 # ------- configuration properties ---------------
 # # Use Material theme
@@ -27,6 +28,6 @@ site_description: 'Open Water Foundation Learn CSV'
 site_author:  'Open Water Foundation'
 site_favicon:  'images/OWF-Logo-Favicon-32x32.png'
 copyright:  'Copyright Open Water Foundation'
-extra:
-  # Use extra CSS to customize styles, based on theme
-  extra_css: 'css/extra-material-theme.css'
+ # Use extra CSS to customize styles, based on theme
+extra_css:
+   - 'css/extra-material-theme.css'

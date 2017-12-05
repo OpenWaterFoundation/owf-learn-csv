@@ -11,15 +11,15 @@ See the deployed [OWF / Learn CSV](http://learn.openwaterfoundation.org/owf-lear
 The repository contains the following:
 
 ```text
-.github/              (Files specific to GitHub such as issue template)
-.gitattributes        (Typical Git configuration file)
-.gitignore            (Typical Git configuration file)
-README.md             (This file)
-build-util/           (Useful scripts to view, build, and deploy documentation)
-mkdocs-project/       (Typical MkDocs project for this documentation)
-  mkdocs.yml          (MkDocs configuration file for website)
-  docs/               (Folder containing source Markdown and other files for website)
-  site/               (Folder created by MkDocs containing the static website - ignored using .gitignore)
+.github/              Files specific to GitHub such as issue template.
+.gitattributes        Typical Git configuration file.
+.gitignore            Typical Git configuration file.
+README.md             This file.
+build-util/           Useful scripts to view, build, and deploy documentation.
+mkdocs-project/       Typical MkDocs project for this documentation.
+  mkdocs.yml          MkDocs configuration file for website.
+  docs/               Folder containing source Markdown and other files for website.
+  site/               Folder created by MkDocs containing the static website - ignored using .gitignore.
 
 ```
 
@@ -63,5 +63,6 @@ This repository is maintained by the [Open Water Foundation](http://openwaterfou
 The following release notes indicate the update history for documentation, with GitHub repository issue indicated,
 if applicable (links to issues via README.md are not cleanly supported by GitHub so use the repository issues page to find).
 
+* 2017-12-04 - add initial content for TSTool
 * 2017-10-21 [3] - switch to Material theme, update documentation based on experience.
 * 2017-06-12 - initial version.
